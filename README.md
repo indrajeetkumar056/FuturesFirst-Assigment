@@ -144,7 +144,7 @@ The script ensures `backend/.env` exists, installs backend/frontend dependencies
 ### Backend (manual)
 
 ```powershell
-cd e:\Futures-First\backend
+cd \backend
 python -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements.txt
 copy .env.example .env
@@ -157,7 +157,7 @@ Use the same port in `NEXT_PUBLIC_BACKEND_BASE_URL`.
 ### Frontend (manual)
 
 ```powershell
-cd e:\Futures-First\frontend
+cd \frontend
 npm install
 # Set NEXT_PUBLIC_BACKEND_BASE_URL in .env.local
 npm run dev
