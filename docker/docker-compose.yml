@@ -1,0 +1,24 @@
+services:
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: ff_backend
+    env_file:
+      - ../backend/.env
+    environment:
+      FRONTEND_ORIGIN: http://localhost:3000
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    container_name: ff_frontend
+    environment:
+      NEXT_PUBLIC_BACKEND_BASE_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

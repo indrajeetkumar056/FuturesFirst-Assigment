@@ -1,0 +1,24 @@
+# Secrets & local config (use .env.example)
+backend/.env
+frontend/.env.local
+
+# Python
+backend/.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# SQLite auth (local / dev)
+backend/data/*.db
+
+# Node / Next (frontend/.gitignore also applies)
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
